@@ -14,6 +14,9 @@ class TestImage
         {
             Image img = new Image("animals.jpg");
             img.draw(gc, 10, 40);
+            
+            img.flipY();
+            img.draw(gc, img.getWidth() + 20, 40);
         } 
         catch (Exception e)
         {

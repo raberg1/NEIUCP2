@@ -84,5 +84,17 @@ public class Image
         
         pixels = temp;
     }
+    
+    public void flipX(){
+        int[][] temp = new int[this.height][this.width];
+        
+        for(int row = 0; row < this.height; row++){
+            for(int col = 0; col < this.width; col++){
+                temp[row][col] = this.pixels[this.height - row - 1][col];
+            }
+        }
+        
+        pixels = temp;
+    }
 
 } 
