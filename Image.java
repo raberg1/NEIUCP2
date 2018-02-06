@@ -72,5 +72,17 @@ public class Image
         BufferedImage bufImage = createBufferedImage();
         gc.drawImage(bufImage, x, y, null);
     }
+    
+    public void flipY(){
+        int[][] temp = new int[this.height][this.width];
+        
+        for(int row = 0; row < this.height; row++){
+            for(int col = 0; col < this.width; col++){
+                temp[row][col] = this.pixels[row][this.width - col - 1];
+            }
+        }
+        
+        pixels = temp;
+    }
 
 } 
